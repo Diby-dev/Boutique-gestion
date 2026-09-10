@@ -50,9 +50,9 @@ export default function AppLayout({ children, title }) {
                 className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-20 pointer-events-none"
                 style={{ backgroundImage: "url('/boutique.jpg')" }}
             />
-            {/* Voile semi-transparent pour assurer la lisibilité */}
+            {/* Léger voile pour garder l'image bien claire et lumineuse */}
             <div 
-                className="fixed inset-0 bg-slate-900/35 backdrop-blur-[1px] -z-10 pointer-events-none"
+                className="fixed inset-0 bg-black/10 -z-10 pointer-events-none"
             />
 
             {/* Header / Navbar */}
@@ -171,11 +171,6 @@ export default function AppLayout({ children, title }) {
             <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
                 {children}
             </main>
-
-            {/* Footer */}
-            <footer className="bg-white/95 backdrop-blur-md border-t border-slate-200/90 py-3 text-center text-xs text-slate-500">
-                Application Boutique Locale &bull; Base de données MySQL (XAMPP : boutique_db) &bull; Mode Enregistré
-            </footer>
         </div>
     );
 }
